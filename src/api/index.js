@@ -8,7 +8,7 @@
 //     try {
        
 //         // const { data: { sources } } = await axios.get(`${url}/${requestSource}${api}`);
-//         const {data:{sources}} = await axios.get(`https://newsapi.org/v2/sources?apiKey=${api}`)
+//         const {data:{sources}} = await axios.get(`https://newsapi.org/v2/sources?apiKey=${api}`,{headers :{'X-Requested-With' :'axios'}})
        
 //         //console.log(sources)
 
@@ -98,7 +98,7 @@ export const fetchNews = async (request,page) => {
       
     //   const { data: { articles } } = await fetch(url)
 
-       const res =await axios.get(url)
+       const res =await axios.get(url,{headers :{'X-Requested-With' :'axios'}})
        
        return res.data
       
