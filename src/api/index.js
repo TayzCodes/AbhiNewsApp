@@ -65,8 +65,8 @@ export const fetchSources = async () => {
     const requestSource = `sources?apiKey=`;
     try {
        
-        // const { data: { sources } } = await axios.get(`${url}/${requestSource}${api}`);
-        const {data:{sources}} = await axios.get(`https://corsanywhere.herokuapp.com/http://newsapi.org/v2/sources?apiKey=${api}`)
+        // const { data: { sources } } = await fetch(`${url}/${requestSource}${api}`);
+        const {data:{sources}} = await fetch(`https://corsanywhere.herokuapp.com/http://newsapi.org/v2/sources?apiKey=${api}`)
        
         //console.log(sources)
 
@@ -96,7 +96,7 @@ export const fetchNews = async (request,page) => {
 
         }
       
-    //   const { data: { articles } } = await axios.get(url)
+    //   const { data: { articles } } = await fetch(url)
 
        const res =await axios.get(url)
        
